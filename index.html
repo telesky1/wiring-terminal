@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>接线端子筛选器</title>
+  <link rel="icon" type="image/x-icon" href="天士凯LOGO.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>接线端子筛选器</h1>
+  <div class="main-container">
+    <div class="left-container">
+      <div class="filter-container">
+        <div class="filter-item">
+          <label for="spacing-filter">间距筛选: </label>
+          <input type="text" id="spacing-filter" placeholder="请输入间距(mm)" oninput="filterTable()">
+        </div>
+        <div class="filter-item">
+          <label for="model-filter">型号筛选: </label>
+          <input type="text" id="model-filter" placeholder="请输入型号" oninput="filterTable()">
+        </div>
+      </div>
+
+      <div class="image-container">
+        <div id="image-preview">将鼠标悬停在表格行上以查看对应规格的图片</div>
+        <div id="image-preview-2">将鼠标悬停在表格行上以查看对应规格的图片</div>
+      </div>
+
+    </div>
+    <div class="right-container">
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th style="width: 20%;">锁定对比</th>
+            <th style="width: 10%;">序号</th>
+            <th style="width: 50%;">型号</th>
+            <th style="width: 20%;">间距 (mm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 数据将通过 JavaScript 动态加载 -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
